@@ -12,7 +12,7 @@ struct SwiftUIBootcampApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            MagnificationGestureTwo()
+            LocalNotificationBootcamp()
         }
     }
 }
