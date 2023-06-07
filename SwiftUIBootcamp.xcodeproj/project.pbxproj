@@ -11,6 +11,7 @@
 		E650012E2A2A0ACB007283EE /* MagnificationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650012D2A2A0ACB007283EE /* MagnificationGesture.swift */; };
 		E65001302A2A0F41007283EE /* MagnificationGestureTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650012F2A2A0F41007283EE /* MagnificationGestureTwo.swift */; };
 		E65001322A2D7482007283EE /* LocalNotificationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65001312A2D7482007283EE /* LocalNotificationBootcamp.swift */; };
+		E65001342A2F29A7007283EE /* OnAppearBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65001332A2F29A7007283EE /* OnAppearBootcamp.swift */; };
 		E667F7E92A1F4E5D008B2E04 /* SwiftUIBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667F7E82A1F4E5D008B2E04 /* SwiftUIBootcampApp.swift */; };
 		E667F7EB2A1F4E5D008B2E04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667F7EA2A1F4E5D008B2E04 /* ContentView.swift */; };
 		E667F7ED2A1F4E5E008B2E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E667F7EC2A1F4E5E008B2E04 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		E650012D2A2A0ACB007283EE /* MagnificationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGesture.swift; sourceTree = "<group>"; };
 		E650012F2A2A0F41007283EE /* MagnificationGestureTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGestureTwo.swift; sourceTree = "<group>"; };
 		E65001312A2D7482007283EE /* LocalNotificationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationBootcamp.swift; sourceTree = "<group>"; };
+		E65001332A2F29A7007283EE /* OnAppearBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearBootcamp.swift; sourceTree = "<group>"; };
 		E667F7E52A1F4E5D008B2E04 /* SwiftUIBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E667F7E82A1F4E5D008B2E04 /* SwiftUIBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBootcampApp.swift; sourceTree = "<group>"; };
 		E667F7EA2A1F4E5D008B2E04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E65001352A2F29BD007283EE /* AditionalSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E65001332A2F29A7007283EE /* OnAppearBootcamp.swift */,
+			);
+			path = AditionalSwift;
+			sourceTree = "<group>";
+		};
 		E667F7DC2A1F4E5D008B2E04 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +67,7 @@
 				E667F7F82A1F640D008B2E04 /* BackgroundMaterialsBootcamp.swift */,
 				E667F7F62A1F4F28008B2E04 /* AsyncImageBootcamp.swift */,
 				E667F7E72A1F4E5D008B2E04 /* SwiftUIBootcamp */,
+				E65001352A2F29BD007283EE /* AditionalSwift */,
 				E667F7E62A1F4E5D008B2E04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +173,7 @@
 				E667F7EB2A1F4E5D008B2E04 /* ContentView.swift in Sources */,
 				E65001302A2A0F41007283EE /* MagnificationGestureTwo.swift in Sources */,
 				E650012A2A28BF3E007283EE /* LongPressGestureBootcamp.swift in Sources */,
+				E65001342A2F29A7007283EE /* OnAppearBootcamp.swift in Sources */,
 				E667F7F92A1F640D008B2E04 /* BackgroundMaterialsBootcamp.swift in Sources */,
 				E667F7F72A1F4F28008B2E04 /* AsyncImageBootcamp.swift in Sources */,
 				E667F7E92A1F4E5D008B2E04 /* SwiftUIBootcampApp.swift in Sources */,
