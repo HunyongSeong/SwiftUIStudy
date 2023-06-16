@@ -19,6 +19,7 @@
 		E667F7F72A1F4F28008B2E04 /* AsyncImageBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667F7F62A1F4F28008B2E04 /* AsyncImageBootcamp.swift */; };
 		E667F7F92A1F640D008B2E04 /* BackgroundMaterialsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667F7F82A1F640D008B2E04 /* BackgroundMaterialsBootcamp.swift */; };
 		E667F7FB2A1F6A48008B2E04 /* TextSelectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667F7FA2A1F6A48008B2E04 /* TextSelectionBootcamp.swift */; };
+		E676E1FC2A3C515500EB3CD8 /* WeakSelfTwoBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676E1FB2A3C515500EB3CD8 /* WeakSelfTwoBootcamp.swift */; };
 		E6CDD7FA2A3446D200E6E322 /* WeekSelfBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CDD7F92A3446D200E6E322 /* WeekSelfBootcamp.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		E667F7F62A1F4F28008B2E04 /* AsyncImageBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageBootcamp.swift; sourceTree = "<group>"; };
 		E667F7F82A1F640D008B2E04 /* BackgroundMaterialsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMaterialsBootcamp.swift; sourceTree = "<group>"; };
 		E667F7FA2A1F6A48008B2E04 /* TextSelectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSelectionBootcamp.swift; sourceTree = "<group>"; };
+		E676E1FB2A3C515500EB3CD8 /* WeakSelfTwoBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSelfTwoBootcamp.swift; sourceTree = "<group>"; };
 		E6CDD7F92A3446D200E6E322 /* WeekSelfBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekSelfBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 		E667F7DC2A1F4E5D008B2E04 = {
 			isa = PBXGroup;
 			children = (
+				E676E1FB2A3C515500EB3CD8 /* WeakSelfTwoBootcamp.swift */,
 				E6CDD7F92A3446D200E6E322 /* WeekSelfBootcamp.swift */,
 				E65001312A2D7482007283EE /* LocalNotificationBootcamp.swift */,
 				E650012F2A2A0F41007283EE /* MagnificationGestureTwo.swift */,
@@ -177,6 +180,7 @@
 				E667F7EB2A1F4E5D008B2E04 /* ContentView.swift in Sources */,
 				E65001302A2A0F41007283EE /* MagnificationGestureTwo.swift in Sources */,
 				E650012A2A28BF3E007283EE /* LongPressGestureBootcamp.swift in Sources */,
+				E676E1FC2A3C515500EB3CD8 /* WeakSelfTwoBootcamp.swift in Sources */,
 				E65001342A2F29A7007283EE /* OnAppearBootcamp.swift in Sources */,
 				E667F7F92A1F640D008B2E04 /* BackgroundMaterialsBootcamp.swift in Sources */,
 				E667F7F72A1F4F28008B2E04 /* AsyncImageBootcamp.swift in Sources */,
