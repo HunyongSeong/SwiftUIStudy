@@ -5,6 +5,13 @@
 //  Created by David Goggins on 2023/06/16.
 //
 
+
+/* 추가적인 이해
+ WeakSelfSecondScreen으로 이동한 후 뒤로가기로 나온 경우에는 WeakSelfSecondScreen의 인스턴스(var vm)는 아직 메모리에 유지되고 있습니다.
+ 그래서 처음 이동 시 (init) 메서드가 호출되며 뒤로가기를 해도 (deinit)이 호출되지 않습니다.
+ 이후 WeakSelfTwoBootcamp에서 WeakSelfSecondScreen으로 다시한번 이동하는 과정에서 WeakSelfSecondScreen의 인스턴스(var vm)가 다시 생성되기(init 호출) 떄문에 기존의 var vm은 메모리에서 제거됩니다.(deinit 호출)
+ */
+
 import SwiftUI
 
 struct WeakSelfTwoBootcamp: View {
@@ -84,6 +91,7 @@ class WeakSelfSecondScreenViewModel: ObservableObject {
 //        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 500) { [weak self] in
             self?.data = "New Data!!!!" // self에 대해서 약한 참조
+            print("test print")
             // self는 이제 선택 사항이므로 업데이트 되는 이 데이터에 대한 참조는 있지만, 이 클래스가 활성 상태를 유지할 필요는 없다고 선언 -> 클래스 초기화 해제 가능
             
             // 실제 데이터를 화면(2)에서 다운받는 경우에 우리가 다른 화면(1)으로 이동하게 되면, 이전에 화면(2)은 필요가 없다. 하지만 데이터를 다운받고 있는 중이기 때문에 이전의 화면(2)은 활성화 상태이다. 그리고 우리는 약한 참조를 통해서 활성화 상태를 유지할 필요가 없다고 알려줄 수 있다.
