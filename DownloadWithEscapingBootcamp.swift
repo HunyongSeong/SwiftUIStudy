@@ -70,19 +70,26 @@ class DownloadWithEscapingViewModel: ObservableObject {
                 return
             }
             
-            print("Successfully Downloaded Data!")
-            print(data)
+//            print("Successfully Downloaded Data!")
+//            print(data)
+//            
+//            // 유니코드는 국제표준 문자표이고 UTF-8은 유니코드를 인코딩하는 방식이다.
+//            let jsonString = String(data: data, encoding: .utf8)
+//            print(jsonString)
             
-            // 유니코드는 국제표준 문자표이고 UTF-8은 유니코드를 인코딩하는 방식이다.
-            let jsonString = String(data: data, encoding: .utf8)
-            print(jsonString)
-            
-            let newPost = try? JSONDecoder().decode(PostModel.self, from: data)
+            guard let newPost = try? JSONDecoder().decode(PostModel.self, from: data) else { return }
+            DispatchQueue.main.async { [weak self] in
+                self?.posts.append(newPost) // 현재 객체인 posts에 newPost를 추가 // 약한참조 // posts는 메인뷰에서 리스트 뷰에 사용
+            }
             /*
-             decode(_:from:) 메서드는 JSONDecoder의 인스턴스 메서드로, JSON 데이터를 디코딩하여 지정된 타입으로 변환합니다.
-             첫 번째 인자로는 디코딩할 데이터의 타입을 지정해줍니다. 여기서는 PostModel.self를 사용하여 PostModel 타입으로
-             디코딩하겠다는 것을 나타냅니다. 두 번째 인자로는 디코딩할 JSON 데이터를 전달합니다.
-             여기서는 data 변수가 JSON 데이터를 담고 있습니다.
+             decode(_: from: ) 메서드는 JSONDecoder의 인스턴스 메서드로, JSON 데이터를 디코딩하여 지정된 타입으로 변환합니다.
+             첫 번째 인자로는 *(디코딩할 데이터의 타입)*을 지정해줍니다. 여기서는 PostModel.self를 사용하여 PostModel 타입으로
+             디코딩하겠다는 것을 나타냅니다. 두 번째 인자로는 *(디코딩할 JSON 데이터를 전달)*합니다.
+             *(여기서는 data 변수가 JSON 데이터를 담고 있습니다)*
+             
+             try?는 에러 처리 방법 중 하나로, 디코딩 과정에서 발생하는 에러를 처리하기 위해 사용됩니다.
+             try?는 에러가 발생하면 nil을 반환하도록 해줍니다. 이를 통해 디코딩 과정에서 에러가 발생하면
+             newPost 변수에 nil이 할당되고, 에러가 발생하지 않으면 디코딩된 PostModel 객체가 newPost 변수에 할당됩니다.
              */
             
         }.resume() // <- 시작기능
@@ -95,7 +102,17 @@ struct DownloadWithEscapingBootcamp: View {
     @StateObject var vm = DownloadWithEscapingViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(vm.posts) { post in // DownloadWithEscapingViewModel()의 posts를 바인딩
+                VStack(alignment: .leading) {
+                    Text(post.title)
+                        .font(.headline)
+                    Text(post.body)
+                        .foregroundColor(.gray)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
     }
 }
 
