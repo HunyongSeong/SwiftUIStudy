@@ -9,12 +9,12 @@
 // - (1)
 import SwiftUI
 
-struct PostModel: Identifiable, Codable { // 식별 가능하도록
-    let userId: Int
-    let id: Int
-    let title: String
-    let body: String
-}
+//struct PostModel: Identifiable, Codable { // 식별 가능하도록
+//    let userId: Int
+//    let id: Int
+//    let title: String
+//    let body: String
+//}
 
 /*
  Codable 프로토콜은 Swift의 인코딩 및 디코딩을 지원하는 프로토콜입니다.
